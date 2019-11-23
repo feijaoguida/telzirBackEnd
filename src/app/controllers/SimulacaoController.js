@@ -24,18 +24,23 @@ class SimulacaoController {
       where: [{ origem }, { destino }]
     });
 
-    //console.log(idTarifa);
-
     if (!idTarifa) {
       return res.json({ Error: "Não existe plano para essas localidades" });
     }
 
     const { valor } = idTarifa;
 
-    let ComFaleMais = calculeFaleMais(plano, tempo, valor);
-    let SemFaleMais = calculeSemFaleMais(tempo, valor);
+    let comFaleMais = calculeFaleMais(plano, tempo, valor);
+    let semFaleMais = calculeSemFaleMais(tempo, valor);
 
-    return res.json({ ComFaleMais, SemFaleMais });
+    return res.json({
+      origem,
+      destino,
+      tempo,
+      plano,
+      comFaleMais,
+      semFaleMais
+    });
   }
 }
 

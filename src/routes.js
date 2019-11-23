@@ -8,6 +8,6 @@ const routes = new Router();
 routes.get("/tarifas", TarifaController.index);
 routes.post("/tarifas", TarifaController.store);
 
-routes.get("/simulacao", SimulacaoController.index);
+routes.post("/simulacao", SimulacaoController.index);
 
 export default routes;
