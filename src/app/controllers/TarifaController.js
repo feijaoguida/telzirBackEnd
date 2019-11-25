@@ -1,4 +1,4 @@
-import Tarifa from "../models/Tarifa";
+const Tarifa = require("../models/Tarifa");
 
 class TarifaController {
   async index(req, res) {
@@ -28,4 +28,4 @@ class TarifaController {
   }
 }
 
-export default new TarifaController();
+module.exports = new TarifaController();

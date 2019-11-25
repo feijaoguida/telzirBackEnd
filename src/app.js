@@ -1,8 +1,8 @@
-import express from "express";
-import routes from "./routes";
-import cors from "cors";
+const express = require("express");
+const routes = require("./routes");
+const cors = require("cors");
 
-import "./database";
+require("./database");
 
 class App {
   constructor() {
@@ -22,4 +22,4 @@ class App {
   }
 }
 
-export default new App().server;
+module.exports = new App().server;

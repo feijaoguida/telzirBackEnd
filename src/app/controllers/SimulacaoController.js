@@ -1,4 +1,4 @@
-import Tarifa from "../models/Tarifa";
+const Tarifa = require("../models/Tarifa");
 
 class SimulacaoController {
   async index(req, res) {
@@ -44,4 +44,4 @@ class SimulacaoController {
   }
 }
 
-export default new SimulacaoController();
+module.exports = new SimulacaoController();

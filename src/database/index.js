@@ -1,8 +1,8 @@
-import Sequelize from "sequelize";
+const Sequelize = require("sequelize");
 
-import Tarifa from "../app/models/Tarifa";
+const Tarifa = require("../app/models/Tarifa");
 
-import databaseConfig from "../config/database";
+const databaseConfig = require("../config/database");
 
 const models = [Tarifa];
 
@@ -18,4 +18,4 @@ class Database {
   }
 }
 
-export default new Database();
+module.exports = new Database();

@@ -1,7 +1,7 @@
-import { Router } from "express";
+const { Router } = require("express");
 
-import TarifaController from "./app/controllers/TarifaController";
-import SimulacaoController from "./app/controllers/SimulacaoController";
+const TarifaController = require("./app/controllers/TarifaController");
+const SimulacaoController = require("./app/controllers/SimulacaoController");
 
 const routes = new Router();
 
@@ -10,4 +10,4 @@ routes.post("/tarifas", TarifaController.store);
 
 routes.post("/simulacao", SimulacaoController.index);
 
-export default routes;
+module.exports = routes;
